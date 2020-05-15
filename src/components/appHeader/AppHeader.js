@@ -30,7 +30,7 @@ export default function AppHeader() {
           if (data.name) {
             setWeather({
               city: data.name,
-              tempreature: data.main.temp,
+              tempreature: Math.round(data.main.temp),
               icon: data.weather[0].icon,
             });
           }
