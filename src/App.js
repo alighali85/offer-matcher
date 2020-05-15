@@ -1,13 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { makeStyles } from '@material-ui/core/styles';
+import AppHeader from './components/header';
+import OffersForm from './containers/offersForm';
+
+const useStyles = makeStyles({
+  root: {
+    minHeight: '100vh',
+  },
+});
 
 function App() {
+  const classes = useStyles();
   return (
-    <div className="App">
-      <header className="App-header">
-       
-      </header>
+    <div className={classes.root}>
+      <AppHeader />
+      <OffersForm />
     </div>
   );
 }
