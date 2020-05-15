@@ -28,7 +28,7 @@ const tabsData = [
 function App() {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <div className={classes.root} data-testid="app-wrapper">
       <AppHeader />
       <OffersForm tabs={tabsData} />
     </div>

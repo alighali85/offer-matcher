@@ -21,6 +21,7 @@ const useStyles = makeStyles({
 });
 
 export default function OffersForm({ tabs = [] }) {
+  OffersForm.testId = 'testId';
   const [activeTab, setActiveTab] = useState(tabs[0]);
   const [offers, setOffers] = useState({ employer: 0, employee: 0 });
   const [inputValue, setInputValue] = useState('');
@@ -48,7 +49,7 @@ export default function OffersForm({ tabs = [] }) {
   };
 
   return (
-    <div data-testid="offers-form" className={classes.root}>
+    <div className={classes.root} data-testid={OffersForm.testId}>
       <Container className={classes.mainContainer}>
         <Paper className={classes.mainPaper} elevation={3}>
           <TabsBar

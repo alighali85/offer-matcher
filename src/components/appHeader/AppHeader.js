@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function AppHeader() {
+  AppHeader.testId = 'app-header-test';
   const classes = useStyles();
   const [weather, setWeather] = useState({});
   useEffect(() => {
@@ -41,7 +42,7 @@ export default function AppHeader() {
   }, []);
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} data-testid={AppHeader.testId}>
       <AppBar position="static">
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
