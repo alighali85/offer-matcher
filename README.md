@@ -1,68 +1,97 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+#  Welcome to Offers matcher!
 
-In the project directory, you can run:
+  
 
-### `yarn start`
+Hi there,
 
-Runs the app in the development mode.<br />
+as a code challenge I created this app, it is a simple offers matcher for job salary,
+
+booth the employer and the employee can enter the desired values,
+
+any one of them can start first, that make no difference.
+
+- after entering the values, a pop up will open and show the result and the entered values.
+
+  
+
+#  How to run the app
+
+- clone the app repository from [HERE](https://github.com/alighali85/offers-matcher/)
+
+- cd the app directory
+
+  
+
+In the project directory, run:
+
+  
+
+###  `yarn start`
+
+  
+
+Runs the app in the development mode.
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+  
 
-### `yarn test`
+###  `yarn test`
+
+  
 
 Launches the test runner in the interactive watch mode.<br />
+
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+  
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#  App TechStack
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+**this app built using:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-  [React](https://reactjs.org/) as a JS framework.
 
-### `yarn eject`
+-  [Material-ui]() as a components library.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+-  [JSS](https://cssinjs.org/?v=v10.1.1) for editing css styles.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-  [Jest](https://jestjs.io/) as a test runner.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+-  [React testing library](https://testing-library.com/docs/react-testing-library/intro) as a test framework.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+-  [Eslint](https://eslint.org/) as code linter
 
-## Learn More
+  
+  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#  App components and functions
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  
 
-### Code Splitting
+-  **Main app header**:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+	- has at left the app title and logo
 
-### Analyzing the Bundle Size
+	- has on the right side, weather widget shows 'London' weather
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+	- clicking on 'London' will open openweather website to show more weather updates about 'London'
 
-### Making a Progressive Web App
+	- you might see instead of weather information 'Loading ...' this appers while fetching the weather information.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+-  **Main offers form**:
 
-### Advanced Configuration
+	- has two tabs at the top (Employer, Employee)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+	- has dynamically changed input form (its label and title change based on active tab)
 
-### Deployment
+	- clicking on any tab will show the input form, just if the user didn't enter a value and save it; it will show the saved value if it is exist.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+	- clicking on 'Submit' button will save the input value, and will rum the matcher login, if booth parties have entered the values.
 
-### `yarn build` fails to minify
+	-after both users have entered the values and submit it, a pop up window will show the result;
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+the result is 'Success' if the employer willing to pay the same amount or more to the employee.
+
+	-clicking on 'Reset' button will reset the form, as well as clicking outside the pop up window.
