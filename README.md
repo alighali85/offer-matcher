@@ -21,6 +21,8 @@ any one of them can start first, that make no difference.
 
 - cd the app directory
 
+- run `yarn` to install the dependencies
+
   
 
 In the project directory, run:
