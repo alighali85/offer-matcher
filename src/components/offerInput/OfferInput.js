@@ -19,20 +19,20 @@ const useStyles = makeStyles((theme) => ({
   },
   inputField: {
     margin: theme.spacing(2),
-    maxWidth: '496px',
-    minWidth: '296px',
+    maxWidth: 496,
+    minWidth: 296,
     alignSelf: 'center',
 
   },
   submitButton: {
     margin: theme.spacing(2),
-    maxWidth: '496px',
-    minWidth: '296px',
+    maxWidth: 496,
+    minWidth: 296,
     alignSelf: 'center',
 
   },
   alert: {
-    margin: '24px',
+    margin: 24,
   },
 }));
 
@@ -40,13 +40,15 @@ export default function OfferInput({
   offerValue, onInput, fieldLabel, fieldValue, onSubmit, title,
 }) {
   const classes = useStyles();
+  OfferInput.withoutValueTestId = 'offer-input-test';
+  OfferInput.withValueTestId = 'offer-input-test-value';
 
   if (offerValue) {
     return (
-      <div className={classes.alert}>
+      <div className={classes.alert} data-testid={OfferInput.withValueTestId}>
         <Alert severity="info">
           <AlertTitle><strong>Value entered</strong></AlertTitle>
-          the value is saved, waiting for other party to enter the expectation.
+          The entered value has beed saved for this user.
           {' '}
         </Alert>
       </div>
@@ -54,7 +56,7 @@ export default function OfferInput({
   }
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} data-testid={OfferInput.withoutValueTestId}>
       <Typography variant="h6" align="center">{title}</Typography>
       <TextField
         className={classes.inputField}
