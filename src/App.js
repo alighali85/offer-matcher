@@ -3,6 +3,7 @@ import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
 import AppHeader from './components/appHeader';
 import OffersForm from './containers/offersForm';
+import { LONDON_WEATHER, TABS_DATA, APP_TITLE } from './config/main';
 
 const useStyles = makeStyles({
   root: {
@@ -10,27 +11,13 @@ const useStyles = makeStyles({
   },
 });
 
-const tabsData = [
-  {
-    id: 0,
-    label: 'Employer',
-    name: 'employer',
-    title: 'As an Employer, enter your maximum offer:',
-  },
-  {
-    id: 1,
-    label: 'Employee',
-    name: 'employee',
-    title: 'As an Employee, enter your minimum acceptable number:',
-  },
-];
 
 function App() {
   const classes = useStyles();
   return (
     <div className={classes.root} data-testid="app-wrapper">
-      <AppHeader />
-      <OffersForm tabs={tabsData} />
+      <AppHeader weatherApi={LONDON_WEATHER} title={APP_TITLE} />
+      <OffersForm tabs={TABS_DATA} />
     </div>
   );
 }
