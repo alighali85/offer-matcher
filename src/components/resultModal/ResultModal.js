@@ -20,15 +20,15 @@ const useStyles = makeStyles((theme) => ({
   },
   inputField: {
     margin: theme.spacing(2),
-    maxWidth: '496px',
-    minWidth: '296px',
+    maxWidth: 496,
+    minWidth: 296,
     alignSelf: 'center',
 
   },
   submitButton: {
     margin: theme.spacing(2),
-    maxWidth: '496px',
-    minWidth: '296px',
+    maxWidth: 496,
+    minWidth: 296,
     alignSelf: 'center',
   },
 }));
@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ResultModal({ result = null, resetAction, offers }) {
   const successMessage = 'Great, you got into an agreement!';
-  const failureMessage = 'Unfortunately, the expectations didn\'t match, try again!';
+  const failureMessage = 'Unfortunately, the expectations didn\'t meet, try again!';
   const [open, setOpen] = useState(true);
   const classes = useStyles();
 
@@ -50,10 +50,9 @@ export default function ResultModal({ result = null, resetAction, offers }) {
         open={open}
         keepMounted
         onClose={handleClose}
-        contentStyle={{ minWidth: '400px' }}
         onExit={resetAction}
       >
-        <DialogTitle>{result ? 'Success' : 'Failed'}</DialogTitle>
+        <DialogTitle>{result ? 'Success!' : 'Failure!'}</DialogTitle>
         <DialogContent>
           <DialogContentText>
             <Alert severity={result ? 'success' : 'error'}>
