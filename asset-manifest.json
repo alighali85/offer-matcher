@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/offers-matcher/static/css/main.5f361e03.chunk.css",
-    "main.js": "/offers-matcher/static/js/main.a4cc3a38.chunk.js",
-    "main.js.map": "/offers-matcher/static/js/main.a4cc3a38.chunk.js.map",
+    "main.js": "/offers-matcher/static/js/main.55bcf3b6.chunk.js",
+    "main.js.map": "/offers-matcher/static/js/main.55bcf3b6.chunk.js.map",
     "runtime-main.js": "/offers-matcher/static/js/runtime-main.933ace33.js",
     "runtime-main.js.map": "/offers-matcher/static/js/runtime-main.933ace33.js.map",
     "static/js/2.c2e7f66d.chunk.js": "/offers-matcher/static/js/2.c2e7f66d.chunk.js",
     "static/js/2.c2e7f66d.chunk.js.map": "/offers-matcher/static/js/2.c2e7f66d.chunk.js.map",
     "index.html": "/offers-matcher/index.html",
-    "precache-manifest.abc9e23a978e990d9bf8034217c02b04.js": "/offers-matcher/precache-manifest.abc9e23a978e990d9bf8034217c02b04.js",
+    "precache-manifest.a3ab54eacd80eb7edce5701a72344d7e.js": "/offers-matcher/precache-manifest.a3ab54eacd80eb7edce5701a72344d7e.js",
     "service-worker.js": "/offers-matcher/service-worker.js",
     "static/css/main.5f361e03.chunk.css.map": "/offers-matcher/static/css/main.5f361e03.chunk.css.map",
     "static/js/2.c2e7f66d.chunk.js.LICENSE.txt": "/offers-matcher/static/js/2.c2e7f66d.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.933ace33.js",
     "static/js/2.c2e7f66d.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.a4cc3a38.chunk.js"
+    "static/js/main.55bcf3b6.chunk.js"
   ]
 }
