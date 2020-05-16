@@ -14,9 +14,9 @@ const useStyles = makeStyles({
     minHeight: '100vh',
   },
   mainPaper: {
-    minHeight: '490px',
-    maxHeight: '490px',
-    marginTop: '48px',
+    minHeight: 490,
+    maxHeight: 490,
+    marginTop: 48,
   },
 });
 
