@@ -39,13 +39,14 @@ export default function ResultModal({ result = null, resetAction, offers }) {
   const failureMessage = 'Unfortunately, the expectations didn\'t meet, try again!';
   const [open, setOpen] = useState(true);
   const classes = useStyles();
+  ResultModal.testId = 'resut-modal-test';
 
   const handleClose = () => {
     setOpen(false);
   };
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} data-testid={ResultModal.testId}>
       <Dialog
         open={open}
         keepMounted
@@ -54,18 +55,17 @@ export default function ResultModal({ result = null, resetAction, offers }) {
       >
         <DialogTitle>{result ? 'Success!' : 'Failure!'}</DialogTitle>
         <DialogContent>
+          <Alert severity={result ? 'success' : 'error'}>
+            {result ? successMessage : failureMessage}
+          </Alert>
           <DialogContentText>
-            <Alert severity={result ? 'success' : 'error'}>
-              {result ? successMessage : failureMessage}
-            </Alert>
-            <br />
             Employer offers:
             {' '}
-            <strong>{offers.employer}</strong>
+            <strong>{offers?.employer}</strong>
             <br />
             Employee wants:
             {' '}
-            <strong>{offers.employee}</strong>
+            <strong>{offers?.employee}</strong>
           </DialogContentText>
         </DialogContent>
         <DialogActions>

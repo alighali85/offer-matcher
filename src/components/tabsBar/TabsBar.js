@@ -11,7 +11,7 @@ export default function TabsBar({ source, activeId, onClick }) {
       indicatorColor="secondary"
       textColor="secondary"
       onChange={onClick}
-      aria-label="disabled tabs example"
+      aria-label="form tabs"
     >
       {source.map((tab) => <Tab label={tab.label} key={tab.label} />)}
     </Tabs>
