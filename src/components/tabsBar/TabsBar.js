@@ -3,8 +3,10 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
 export default function TabsBar({ source, activeId, onClick }) {
+  TabsBar.testId = 'tabs-bar-test';
   return (
     <Tabs
+      data-testid={TabsBar.testId}
       value={activeId}
       indicatorColor="secondary"
       textColor="secondary"
